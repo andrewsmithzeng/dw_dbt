@@ -14,6 +14,6 @@ date_day,
 day_of_week,
 month_of_year,
 month_name,
-quarter_of_year,
+quarter_of_year, 
 year_number
 from cte_date
