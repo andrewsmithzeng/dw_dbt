@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: oliver_raw
+    database: AndyZeng
+    schema:  OLIVER_DW_SOURCE 
+    tables:
+      - name: CUSTOMER
+      - name: EMPLOYEE
+      - name: ORDERLINE
+      - name: ORDERS
+      - name: PRODUCT
+      - name: STORE
+      
