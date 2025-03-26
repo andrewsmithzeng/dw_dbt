@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: samssubs_dim_product
+    description: ""
+  - name: samssubs_dim_store
+    description: ""
+  - name: samssubs_dim_employee
+    description: " "
+  - name: samssubs_dim_customer
+    description: ""
+  - name: fact_orderdetails
+    description: ""
+  - name: dim_date
+    description: ''

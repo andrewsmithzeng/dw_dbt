@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: samssubs_landing
+    database: AndyZeng
+    schema:  SAMSSUBS_SOURCE
+    tables:
+      - name: WEB_TRAFFIC_EVENTS
+ 

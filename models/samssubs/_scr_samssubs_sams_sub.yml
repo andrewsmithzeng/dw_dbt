@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: samssubs_landing
+    database: AndyZeng
+    schema:  SAMSSUBS_SOURCE_SAMS_SUBS
+    tables:
+      - name: CUSTOMER
+      - name: EMPLOYEE
+      - name: ORDER
+      - name: ORDERDETAIILS
+      - name: PRODUCT
+      - name: SANDWICH
+      - name: STORE
+      
+
+ 
