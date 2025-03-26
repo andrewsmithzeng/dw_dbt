@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: samssubs_sams_sub_dim_event
+    description: ""
+  - name: samssubs_sams_sub_dim_source
+    description: ""
+  - name: samssubs_sams_sub_dim_page
+    description: " "
+  - name: fact_webtracking
+    description: ""
+  - name: dim_date
+    description: ''
