@@ -20,18 +20,19 @@ with semantic_orderdetails  as (
   left join {{ ref('samssubs_dim_product') }} p on od.Product_Key = p.Product_Key
   left join {{ ref('samssubs_dim_store') }} s on od.Store_Key = s.Store_Key
   left join {{ ref('samssubs_dim_customer') }} c on od.Cust_Key = c.Cust_Key
+  left join {{ ref("samssubs_dim_employee") }} e on od.employee_key = e.employee_key
   left join {{ ref('samssubs_dim_date') }} d on od.Date_Key = d.Date_Key
 
-  GROUP BY od.Date_Key,od.order_key,od.PointsEarned,od.product_key,od.product_key,p.ProductName,od.employee_key,
+  GROUP BY od.Date_Key,od.order_key,od.PointsEarned,od.product_key,p.producttype,p.ProductName,od.employee_key,
   e.employeefname, e.employeelname,od.cust_key,c.CustomerFName,c.CustomerLName
-)
+),
   
 
 semantic_webtracking as (
   select 
-    w.Date_Key as date
+    w.Date_Key as date,
     e.Event_name,
-    s.SourceName,
+    s.Source_Name,
     p.page_url,
     w.CountOfInteractions
   from {{ ref('samssubs_fact_webtracking') }} w
@@ -41,7 +42,22 @@ semantic_webtracking as (
   left join {{ ref('samssubs_dim_date') }} d on w.Date_Key = d.Date_Key
 )
 
-select *
+select  
+so.date,
+so.orderid,
+so.total_sales,
+so.pointsearned,
+so.productid,
+so.producttype,
+so.productname,
+so.employeeid,
+so.employee_name,
+so.customerid,
+so.customer_name,
+sw.event_name,
+sw.source_name,
+sw.page_url,
+sw.countofinteractions
 from semantic_orderdetails so
 full outer join semantic_webtracking sw
 on so.date = sw.date
