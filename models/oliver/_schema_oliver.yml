@@ -9,5 +9,5 @@ models:
     description: " "
   - name: oliver_dim_product
     description: ""
-  - name: Fact_sales
+  - name: oliver_Fact_sales
     description: "Oliver Sales Fact"
