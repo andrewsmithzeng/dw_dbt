@@ -16,7 +16,7 @@ e.lastname AS employee_last_name,
 quantity,
 dollars_sold,
 unit_price
-FROM {{ ref('fact_sales') }} AS f
+FROM {{ ref('oliver_fact_sales') }} AS f
 LEFT JOIN {{ ref("oliver_dim_customer") }} AS c ON f.cust_key = c.cust_key
 LEFT JOIN {{ ref('oliver_dim_date') }} AS d ON f.date_key= d.date_key
 LEFT JOIN {{ ref('oliver_dim_employee') }} AS e ON f.employee_key = e.employee_key

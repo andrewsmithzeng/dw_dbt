@@ -9,7 +9,16 @@ models:
     description: " "
   - name: samssubs_dim_customer
     description: ""
-  - name: fact_orderdetails
+  - name: samssubs_fact_orderdetails
     description: ""
-  - name: dim_date
+  - name: samssubs_dim_date
     description: ''
+  - name: samssubs_fact_webtracking
+    description: ""
+  - name: samssubs_dim_event
+    description: ""
+  - name: samssubs_dim_source
+    description: ""
+  - name: samssubs_dim_page
+    description: " "
+
