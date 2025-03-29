@@ -7,8 +7,8 @@ sources:
     tables:
       - name: CUSTOMER
       - name: EMPLOYEE
-      - name: ORDER
-      - name: ORDERDETAIILS
+      - name: '"ORDER"'
+      - name: ORDERDETAILS
       - name: PRODUCT
       - name: SANDWICH
       - name: STORE

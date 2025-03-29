@@ -1,5 +1,5 @@
 {{ config(
-    materialized = 'table'
+    materialized = 'table',
     schema = 'dw_samssubs'
 ) }}
 
