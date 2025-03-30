@@ -3,6 +3,11 @@ version: 2
 models:
   - name: samssubs_dim_product
     description: ""
+    columns:
+      - name: productid
+        tests:
+          - not_null
+          - unique
   - name: samssubs_dim_store
     description: ""
   - name: samssubs_dim_employee
@@ -21,4 +26,21 @@ models:
     description: ""
   - name: samssubs_dim_page
     description: " "
+  - name: samssubs_semantic_orderdetails
+    description: ''
+    columns: 
+      - name: productid
+        tests:
+          - not_null
+      - name: orderid
+        tests:
+          - not_null
+  - name: samssubs_semantic_webtracking
+    description: ''
+    columns:
+      - name: date
+        tests:
+          - not_null
+    
+
 
