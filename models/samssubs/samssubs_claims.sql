@@ -59,5 +59,5 @@ sw.source_name,
 sw.page_url,
 sw.countofinteractions
 from semantic_orderdetails so
-full outer join semantic_webtracking sw
+inner join semantic_webtracking sw
 on so.date = sw.date
