@@ -10,6 +10,6 @@ productcost,
 productcalories,
 length,
 breadtype
-FROM {{ source("samssubs_landing","PRODUCT") }} p JOIN 
+FROM {{ source("samssubs_landing","PRODUCT") }} p LEFT JOIN 
 {{ source("samssubs_landing",'SANDWICH') }} s on p.productid = s.productid
 ORDER BY 1
