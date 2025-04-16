@@ -12,6 +12,7 @@ SELECT
     od.PointsEarned,
     od.employee_key AS employeeid,
     e.employeefname || ' ' || e.employeelname AS employee_name,
+    s.address || ',' || s.city || ',' || s.state AS store,
     od.cust_key AS customerid,
     c.CustomerFName || ' ' || c.CustomerLName as customer_name
 FROM {{ ref('samssubs_fact_orderdetails') }} od
