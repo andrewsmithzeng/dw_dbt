@@ -4,6 +4,7 @@ SELECT
     e.Event_name,
     s.Source_Name,
     p.page_url,
+    w.user_email,
     w.CountOfInteractions
 FROM {{ ref('samssubs_fact_webtracking') }} w
 LEFT JOIN {{ ref('samssubs_dim_event') }} e ON w.Event_Key = e.Event_Key
